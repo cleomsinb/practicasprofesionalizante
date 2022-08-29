@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crud-Localstorage </title>
     <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -31,7 +31,7 @@
                     <input id="inp_puerto" class="form-control" type="text">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Pais/Ciudad</label>
+                    <label class="form-label">Ciudad</label>
                     <input id="inp_ciudad" class="form-control" type="text">
                 </div>
                 <div class="mb-3">
@@ -39,10 +39,14 @@
                     <input id="inp_velocidad" class="form-control" type="number">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Tipo</label>
-                    <input id="inp_tipo" class="form-control" type="text">
+                    <select id="inp_tipo" class="form-select">
+                        <option selected disabled value="-1">Tipo:</option>
+                        <option value="0">HTTP</option>
+                        <option value="1">SOCKET</option>
+                     </select>
                 </div>
                 <button onclick="guardar()" id="btn_guardar" class="btn btn-success">Guardar</button>
+                <button style="display:none" onclick="actualizar()" id="btn_actualizar" class="btn btn-success">Actualizar</button>
             </div>
 
             <div class="col-lg-8">
@@ -53,7 +57,7 @@
                             <th>N°</th>
                             <th>Direccioin IP</th>
                             <th>Puerto</th>
-                            <th>Pais/Ciudad</th>
+                            <th>Ciudad</th>
                             <th>Velocidad</th>
                             <th>Tipo</th>
                             <th>Acciones</th>
